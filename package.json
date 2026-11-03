@@ -1,0 +1,24 @@
+{
+  "name": "hwlesson5",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "page105-1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node page105-1.js"
+  },
+  "repository": {
+    "url": "git+https://github.com/elisheva-orzitzer/lesson5-http.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elisheva-orzitzer/lesson5-http/issues"
+  },
+  "homepage": "https://github.com/elisheva-orzitzer/lesson5-http#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
