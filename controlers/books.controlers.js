@@ -1,7 +1,4 @@
-import express from "express";
-const app = express();
-app.use(express.json());
-import {arrBooks} from "../data/books"
+import {arrBooks} from "../data/books.js"
 
 const arrLend = [];
 
@@ -10,7 +7,7 @@ const arrLend = [];
 //וכן איזה עמוד ומספר ספרים בעמוד
 export const getAllBooks = (req, res) => {
   const { page = 1, limit = 10, name } = req.query;
-  let result = name === null ? arrBooks : arrBooks.filter((na) => na.name === name);
+  let result = !name ? arrBooks : arrBooks.filter((na) => na.name === name);
   result = result.slice((page - 1) * limit, page * limit);
   res.end(`the books that we have the staff:${JSON.stringify(result)}`);
 };
@@ -41,7 +38,7 @@ export const lendBook = (req, res) => {
     return res.status(404).json({ error: "Book not found" });
   }
   if (!arrBooks[index].islend) {
-    arrBooks[index] = { ...req.body, islend: true };
+    arrBooks[index].islend =true
     arrLend.push(req.body);
     res.json(req.body);
   } else {

@@ -10,11 +10,11 @@ import {
 
 const booksRouter = Router();
 
-router.get("/", getAllBooks);
-router.get("/:id", getBookById);
-router.post("/", addBook);
-router.put("/lend/:id", lendBook);
-router.put("/return/:id", returnBook);
-router.delete("/:id", deleteBook);
+booksRouter.get("/", getAllBooks);
+booksRouter.get("/:id", getBookById);
+booksRouter.post("/", addBook);
+booksRouter.put("/lend/:id", lendBook);
+booksRouter.put("/return/:id", returnBook);
+booksRouter.delete("/:id", deleteBook);
 
-export default router;
+export default booksRouter;

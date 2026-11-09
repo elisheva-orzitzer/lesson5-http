@@ -1,9 +1,3 @@
-import express from "express";
-const app = express();
-app.use(express.json());
-import arrUsers from "users.js"
-console.log(arrUsers)
-
 export const arrBooks = [
   {
     id: 101,
